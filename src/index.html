@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - HAMNA</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="output.css">
+    <style>
+        @keyframes wave {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            10% {
+                transform: rotate(14deg);
+            }
+
+            20% {
+                transform: rotate(-8deg);
+            }
+
+            30% {
+                transform: rotate(14deg);
+            }
+
+            40% {
+                transform: rotate(-4deg);
+            }
+
+            50% {
+                transform: rotate(10deg);
+            }
+
+            60% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+
+        .wave {
+            display: inline-block;
+            transform-origin: 70% 70%;
+            animation: wave 2s infinite;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0
+            }
+
+            to {
+                width: 12ch
+            }
+
+            /* match text length */
+        }
+
+        @keyframes blink {
+            50% {
+                border-color: transparent
+            }
+
+            100% {
+                border-color: white
+            }
+        }
+
+        .typewriter {
+            display: inline-block;
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 3px solid white;
+            animation: typing 3s steps(18, end) forwards, blink 0.7s step-end infinite;
+        }
+
+        .click-scale {
+            transform: scale(1.05);
+            transition: transform 0.2s ease;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen bg-gradient-to-b from-purple-900 via-gray-900 to-black">
+
+    <!-- background -->
+    <div class="fixed inset-0 -z-10 pointer-events-none">
+        <div id="particles-js" class="absolute inset-0"></div>
+        <canvas id="bg" class="absolute inset-0"></canvas>
+    </div>
+
+    <main class="relative z-10">
+        <!-- navbar -->
+        <nav id="navbar"
+            class="bg-gray-900 text-white md:py-6 md:px-28 py-4  px-10 border-b border-gray-600 flex justify-between w-full sticky  top-0 z-50">
+            <div id="logoName" class="flex items-center">
+                <div
+                    class="w-12 h-12 rounded-full bg-gradient-to-r from-purple-900 to-purple-400 flex items-center justify-center">
+                    <span class="text-white text-2xl font-bold">H</span>
+                </div>
+                <h1
+                    class="text-3xl font-bold bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent px-4">
+                    HAMNA</h1>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-btn" class="p-2 cursor-pointer">
+                    <i id="menu-icon" class="fa-solid fa-bars text-white text-lg"></i>
+                </button>
+
+            </div>
+            <div id="navButtons" class="md:flex items-center justify-center hidden cursor-pointer ">
+                <ul class="flex space-x-8 ">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div id="mobile-menu"
+            class="hidden flex-col bg-purple-900 p-4 space-y-4 md:hidden transition-all duration-300 ease-in-out cursor-pointer sticky top-[80px] z-40">
+            <a href="#about" class="flex items-center font-bold justify-center text-center w-full cursor-pointer">About</a>
+            <a href="#skills" class="flex items-center font-bold justify-center text-center w-full cursor-pointer">Skills</a>
+            <a href="#projects" class="flex items-center font-bold justify-center text-center w-full cursor-pointer">Projects</a>
+            <a href="#contacts" class="flex items-center font-bold justify-center text-center w-full cursor-pointer">Contacts</a>
+        </div>
+        <!-- heroSection -->
+        <div id="hero" class= "">
+            <div class="md:pt-40 pt-25 ">
+                <h3 class="md:text-purple-300 text-purple-100  text-base sm:text-lg md:text-xl text-center pb-3">
+                    <span class="wave">👋</span> Hello, I'm
+                </h3>
+                <h1 class="text-4xl sm:text-4xl md:text-7xl font-bold text-center  ">
+                    <span class="typewriter md:text-purple-200 text-white">Hamna Nasir!</span>
+                </h1>
+            </div>
+            <div>
+                <p class="text-xl md:text-3xl md:text-purple-100 text-white text-center md:pl-30 md:pr-30 mb-6 ">Aspiring Frontend Developer & UI/UX Designer learning to craft simple and engaging digital experiences</p>
+            </div>
+            <div class="flex justify-center items-center">
+                <div class="text-white text-sm md:text-lg bg-gradient-to-r from-purple-900 to-purple-400 rounded-full p-3 md:p-5 m-3 cursor-pointer " id="ViewMyWorkBtn">View My Work</div>
+                <div class="text-white text-sm md:text-lg border-2 border-purple-600 rounded-full p-3 md:p-5 m-3 cursor-pointer " id="GetInTouchBtn">Get in Touch</div>
+            </div>
+            <div class="mt-10 md:mt-20 mb-3 md:mb-6 text-center " id="AngleDownBtn">
+                <a href="#StatusBar"><i class="fa-solid fa-angle-down text-xl md:text-3xl text-purple-600 cursor-pointer"></i></a>
+            </div>
+            <div class="bg-gray-200/20 flex flex-col md:flex-row space-y-9  md:space-y-0  md:space-x-6 justify-between w-full p-8 md:p-16" id="StatusBar">
+                <div class="text-white text-center text-sm md:text-xl m-4 cursor-pointer"><div class=" text-purple-600  font-bold text-center text-xl md:text-4xl">5+</div>Practice Projects completed</div>
+                <div class="text-white text-center text-sm md:text-xl m-4 cursor-pointer"><div class="text-purple-600 font-bold text-center text-xl md:text-4xl">6+</div>Months learning Experience</div>
+                <div class="text-white text-center text-sm md:text-xl m-4 cursor-pointer"><div class="text-purple-600 font-bold
+                text-center text-xl md:text-4xl">3+</div>collaborations</div>
+                <div class="text-white text-center text-sm md:text-xl m-4 cursor-pointer"><div class="text-purple-600 font-bold
+                text-center text-xl md:text-4xl ">Always</div>Eager to learn & Improve</div>
+            </div>
+        </div>
+
+        <!-- aboutSection -->
+         <div id="about" class="">
+            <div class="flex flex-col items-center m-10 md:m-20 ">
+                <h1 class="text-3xl md:text-5xl font-bold text-purple-600">About Me</h1>
+                <div class="w-15 md:w-24 h-1 bg-gradient-to-r from-purple-900 to-purple-400 mt-3 rounded"></div>
+            </div>
+            <div class="flex flex-col md:flex-row justify-between md:mx-30  ">
+                <div id="Photo" class="flex justify-center items-center "><img src="\assets\photo.jpeg" alt="Image unable to Load" class="rounded-full h-50 w-50 md:h-70 md:w-70  border-2 md:border-4 border-purple-800 animate-float"></div>
+                <div id="SelfIntro" class="w-full md:w-200">
+                    <h2 class="text-purple-200 font-bold text-xl md:text-4xl text-center
+                    ">Excited to Start My Web Development Journey</h2>
+                    <p class="text-center text-white m-3 text-sm md:text-lg  ">I’m an aspiring frontend developer and beginner UI/UX enthusiast, currently exploring how to bring creative ideas to life on the web. My journey started with curiosity about how websites work, and now I’m learning the building blocks step by step.
+                    I’m focusing on HTML, CSS (with Tailwind), and JavaScript basics while also exploring design principles to improve user experience. Every small project I build is a chance to learn, grow, and move closer to creating digital experiences that are both simple and engaging.</p>
+                    <div class="flex flex-col items-center justify-center md:flex-row mt-10  ">
+                        <div class="flex flex-col justify-center border border-white bg-gray-300/30 w-70  md:w-40 rounded-xl text-center p-3 m-2 md:h-40">
+                            <i class="fa-solid fa-code text-purple-400 text-lg"></i>
+                            <h3 class="text-white font-bold text-lg  ">Clean Code</h3>
+                            <p class="text-gray-400 text-sm">Writing maintainable and scalable code</p>
+                        </div>
+                        <div class="flex flex-col justify-center border border-white bg-gray-300/30 w-70  md:w-40 rounded-xl text-center p-3 m-2 md:h-40">
+                            <i class="fa-solid fa-mobile-screen text-blue-400 text-lg "></i>
+                            <h3 class="text-white font-bold text-lg  ">Responsive Design</h3>
+                            <p class="text-gray-400 text-sm">Perfect on every device and screen size</p>
+                        </div>
+                        <div class="flex flex-col justify-center border border-white bg-gray-300/30 w-70    md:w-40 rounded-xl text-center p-3 m-2 md:h-40">
+                            <i class="fa-solid fa-rocket text-green-400 text-lg "></i>
+                            <h3 class="text-white font-bold text-lg  ">Performance</h3>
+                            <p class="text-gray-400 text-sm">Optimized for speed and efficiency</p>
+                        </div>
+                        <div class="flex flex-col justify-center border border-white bg-gray-300/30 w-70  md:w-40 rounded-xl text-center p-3 m-2 md:h-40">
+                            <i class="fa-solid fa-palette text-pink-400 text-lg"></i>
+                            <h3 class="text-white font-bold text-lg  ">Creative Design</h3>
+                            <p class="text-gray-400 text-sm">Unique and engaging user interfaces</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </div>
+
+         <!-- SkillsSection -->
+          <div id="skills" class="">
+            <div></div>
+          </div>
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
+    <script src="
+         https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js
+    "></script>
+    <script src="particals.js"></script>
+    <script src="main.js"></script>
+    <script src="three.js"></script>
+
+</body>
+
+</html>
