@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
@@ -9,6 +9,18 @@
 
     <link rel="stylesheet" href="output.css">
     <style>
+        ::-webkit-scrollbar {
+            display: none;
+            /* Chrome, Safari, Edge */
+        }
+
+        body {
+            -ms-overflow-style: none;
+            /* IE & Edge */
+            scrollbar-width: none;
+            /* Firefox */
+        }
+
         @keyframes wave {
             0% {
                 transform: rotate(0deg);
@@ -264,7 +276,8 @@
             <div class="flex justify-center m-10 mb-6 md:mb-4 ">
                 <h2 class="text-purple-500 text-xl font-bold md:text-3xl ">Frontend Technologies</h2>
             </div>
-            <div class="grid grid-cols-2 md:flex md:flex-row px-4 md:px-20 md:justify-between md:mx-50 gap-4 mb-12 md:mb-6 ">
+            <div
+                class="grid grid-cols-2 md:flex md:flex-row px-4 md:px-20 md:justify-between md:mx-50 gap-4 mb-12 md:mb-6 ">
                 <div
                     class="flex flex-col justify-center border border-white bg-gray-300/30  rounded-xl text-center p-3 md:w-50">
                     <i class="fa-brands fa-html5 text-blue-400 text-2xl mt-1"></i>
@@ -291,7 +304,7 @@
                 </div>
             </div>
 
-              <!-- backendSkills -->
+            <!-- backendSkills -->
             <div class="flex justify-center m-10 mb-6 md:mb-4  ">
                 <h2 class="text-purple-500 text-xl font-bold md:text-3xl ">Backend & Tools</h2>
             </div>
@@ -303,7 +316,7 @@
                     <h2 class="text-white font-bold">Node.js</h2>
                     <div class=" h-2 bg-green-400  rounded text-center m-3"></div>
                 </div>
-                
+
                 <div
                     class="flex flex-col justify-center border border-white bg-gray-300/30  rounded-xl text-center p-3 md:w-50">
                     <i class="fa-brands fa-square-git text-red-400 text-2xl mt-1"></i>
@@ -312,7 +325,7 @@
                 </div>
             </div>
 
-               <!-- Design&Creative -->
+            <!-- Design&Creative -->
             <div class="flex justify-center m-10 mb-6 md:mb-4  ">
                 <h2 class="text-purple-500 text-xl font-bold md:text-3xl ">Design & Creative</h2>
             </div>
@@ -346,67 +359,86 @@
         </div>
 
         <!-- ProjectsSection -->
-         <div id="projects">
+        <div id="projects">
             <div class="flex flex-col items-center m-10 md:m-20 ">
                 <h1 class="text-3xl md:text-5xl font-bold text-purple-600">Featured Projects</h1>
                 <div class="w-15 md:w-24 h-1 bg-gradient-to-r from-purple-900 to-purple-400 mt-3 rounded"></div>
-                <p class="text-white text-lg md:text-2xl text-center mt-5 ">A look at what I’ve built and practiced so far</p>
+                <p class="text-white text-lg md:text-2xl text-center mt-5 ">A look at what I’ve built and practiced so
+                    far</p>
             </div>
             <div class="grid grid-flow-col grid-rows-6 gap-3 md:grid-rows-2 m-5 md:m-20 ">
-                <div class="bg-gray-300/40 h-100 md:h-115 md:w-100 m-2 rounded-2xl cursor-pointer" onclick="this.classList.add('tilt'); setTimeout(()=>this.classList.remove('tilt'), 500)">
+                <div class="bg-gray-300/40 h-100 md:h-115 md:w-100 m-2 rounded-2xl cursor-pointer"
+                    onclick="this.classList.add('tilt'); setTimeout(()=>this.classList.remove('tilt'), 500)">
                     <img src="image123.png" alt="" class="rounded-t-2xl h-45 w-full md:h-60  ">
                     <h2 class="text-white font-bold mt-3 text-center text-lg md:text-2xl ">Ecommerce Platform</h2>
-                    <p class="text-gray-300 text-center px-5  md:text-lg ">A modern, responsive e-commerce solution built with HTML , CSS and JS featuring advanced filtering, payment integration, and admin dashboard.</p>
+                    <p class="text-gray-300 text-center px-5  md:text-lg ">A modern, responsive e-commerce solution
+                        built with HTML , CSS and JS featuring advanced filtering, payment integration, and admin
+                        dashboard.</p>
                     <div class="flex mx-5">
                         <div class="bg-green-900/50 rounded-3xl text-green-400 text-sm px-2 py-1 mx-1 my-2 ">HTML</div>
                         <div class="bg-yellow-900/50 rounded-3xl text-yellow-400 text-sm px-2 py-1 mx-1 my-2">CSS</div>
                         <div class="bg-blue-900/50 rounded-3xl text-blue-400 text-sm px-2 py-1 mx-1 my-2">JS</div>
                     </div>
                 </div>
-                <div class="bg-gray-300/40 h-100 md:h-115 md:w-100 m-2 rounded-2xl cursor-pointer" onclick="this.classList.add('tilt'); setTimeout(()=>this.classList.remove('tilt'), 500)">
+                <div class="bg-gray-300/40 h-100 md:h-115 md:w-100 m-2 rounded-2xl cursor-pointer"
+                    onclick="this.classList.add('tilt'); setTimeout(()=>this.classList.remove('tilt'), 500)">
                     <img src="image123.png" alt="" class="rounded-t-2xl h-45 w-full md:h-60  ">
                     <h2 class="text-white font-bold mt-3 text-center text-lg md:text-2xl ">Ecommerce Platform</h2>
-                    <p class="text-gray-300 text-center px-5  md:text-lg ">A modern, responsive e-commerce solution built with HTML , CSS and JS featuring advanced filtering, payment integration, and admin dashboard.</p>
+                    <p class="text-gray-300 text-center px-5  md:text-lg ">A modern, responsive e-commerce solution
+                        built with HTML , CSS and JS featuring advanced filtering, payment integration, and admin
+                        dashboard.</p>
                     <div class="flex mx-5">
                         <div class="bg-green-900/50 rounded-3xl text-green-400 text-sm px-2 py-1 mx-1 my-2 ">HTML</div>
                         <div class="bg-yellow-900/50 rounded-3xl text-yellow-400 text-sm px-2 py-1 mx-1 my-2">CSS</div>
                         <div class="bg-blue-900/50 rounded-3xl text-blue-400 text-sm px-2 py-1 mx-1 my-2">JS</div>
                     </div>
                 </div>
-                <div class="bg-gray-300/40 h-100 md:h-115 md:w-100 m-2 rounded-2xl cursor-pointer" onclick="this.classList.add('tilt'); setTimeout(()=>this.classList.remove('tilt'), 500)">
+                <div class="bg-gray-300/40 h-100 md:h-115 md:w-100 m-2 rounded-2xl cursor-pointer"
+                    onclick="this.classList.add('tilt'); setTimeout(()=>this.classList.remove('tilt'), 500)">
                     <img src="image123.png" alt="" class="rounded-t-2xl h-45 w-full md:h-60  ">
                     <h2 class="text-white font-bold mt-3 text-center text-lg md:text-2xl ">Ecommerce Platform</h2>
-                    <p class="text-gray-300 text-center px-5  md:text-lg ">A modern, responsive e-commerce solution built with HTML , CSS and JS featuring advanced filtering, payment integration, and admin dashboard.</p>
+                    <p class="text-gray-300 text-center px-5  md:text-lg ">A modern, responsive e-commerce solution
+                        built with HTML , CSS and JS featuring advanced filtering, payment integration, and admin
+                        dashboard.</p>
                     <div class="flex mx-5">
                         <div class="bg-green-900/50 rounded-3xl text-green-400 text-sm px-2 py-1 mx-1 my-2 ">HTML</div>
                         <div class="bg-yellow-900/50 rounded-3xl text-yellow-400 text-sm px-2 py-1 mx-1 my-2">CSS</div>
                         <div class="bg-blue-900/50 rounded-3xl text-blue-400 text-sm px-2 py-1 mx-1 my-2">JS</div>
                     </div>
                 </div>
-                <div class="bg-gray-300/40 h-100 md:h-115 md:w-100 m-2 rounded-2xl cursor-pointer" onclick="this.classList.add('tilt'); setTimeout(()=>this.classList.remove('tilt'), 500)">
+                <div class="bg-gray-300/40 h-100 md:h-115 md:w-100 m-2 rounded-2xl cursor-pointer"
+                    onclick="this.classList.add('tilt'); setTimeout(()=>this.classList.remove('tilt'), 500)">
                     <img src="image123.png" alt="" class="rounded-t-2xl h-45 w-full md:h-60  ">
                     <h2 class="text-white font-bold mt-3 text-center text-lg md:text-2xl ">Ecommerce Platform</h2>
-                    <p class="text-gray-300 text-center px-5  md:text-lg ">A modern, responsive e-commerce solution built with HTML , CSS and JS featuring advanced filtering, payment integration, and admin dashboard.</p>
+                    <p class="text-gray-300 text-center px-5  md:text-lg ">A modern, responsive e-commerce solution
+                        built with HTML , CSS and JS featuring advanced filtering, payment integration, and admin
+                        dashboard.</p>
                     <div class="flex mx-5">
                         <div class="bg-green-900/50 rounded-3xl text-green-400 text-sm px-2 py-1 mx-1 my-2 ">HTML</div>
                         <div class="bg-yellow-900/50 rounded-3xl text-yellow-400 text-sm px-2 py-1 mx-1 my-2">CSS</div>
                         <div class="bg-blue-900/50 rounded-3xl text-blue-400 text-sm px-2 py-1 mx-1 my-2">JS</div>
                     </div>
                 </div>
-                <div class="bg-gray-300/40 h-100 md:h-115 md:w-100 m-2 rounded-2xl cursor-pointer" onclick="this.classList.add('tilt'); setTimeout(()=>this.classList.remove('tilt'), 500)">
+                <div class="bg-gray-300/40 h-100 md:h-115 md:w-100 m-2 rounded-2xl cursor-pointer"
+                    onclick="this.classList.add('tilt'); setTimeout(()=>this.classList.remove('tilt'), 500)">
                     <img src="image123.png" alt="" class="rounded-t-2xl h-45 w-full md:h-60  ">
                     <h2 class="text-white font-bold mt-3 text-center text-lg md:text-2xl ">Ecommerce Platform</h2>
-                    <p class="text-gray-300 text-center px-5  md:text-lg ">A modern, responsive e-commerce solution built with HTML , CSS and JS featuring advanced filtering, payment integration, and admin dashboard.</p>
+                    <p class="text-gray-300 text-center px-5  md:text-lg ">A modern, responsive e-commerce solution
+                        built with HTML , CSS and JS featuring advanced filtering, payment integration, and admin
+                        dashboard.</p>
                     <div class="flex mx-5">
                         <div class="bg-green-900/50 rounded-3xl text-green-400 text-sm px-2 py-1 mx-1 my-2 ">HTML</div>
                         <div class="bg-yellow-900/50 rounded-3xl text-yellow-400 text-sm px-2 py-1 mx-1 my-2">CSS</div>
                         <div class="bg-blue-900/50 rounded-3xl text-blue-400 text-sm px-2 py-1 mx-1 my-2">JS</div>
                     </div>
                 </div>
-                <div class="bg-gray-300/40 h-100 md:h-115 md:w-100 m-2 rounded-2xl cursor-pointer" onclick="this.classList.add('tilt'); setTimeout(()=>this.classList.remove('tilt'), 500)">
+                <div class="bg-gray-300/40 h-100 md:h-115 md:w-100 m-2 rounded-2xl cursor-pointer"
+                    onclick="this.classList.add('tilt'); setTimeout(()=>this.classList.remove('tilt'), 500)">
                     <img src="image123.png" alt="" class="rounded-t-2xl h-45 w-full md:h-60  ">
                     <h2 class="text-white font-bold mt-3 text-center text-lg md:text-2xl ">Ecommerce Platform</h2>
-                    <p class="text-gray-300 text-center px-5  md:text-lg ">A modern, responsive e-commerce solution built with HTML , CSS and JS featuring advanced filtering, payment integration, and admin dashboard.</p>
+                    <p class="text-gray-300 text-center px-5  md:text-lg ">A modern, responsive e-commerce solution
+                        built with HTML , CSS and JS featuring advanced filtering, payment integration, and admin
+                        dashboard.</p>
                     <div class="flex mx-5">
                         <div class="bg-green-900/50 rounded-3xl text-green-400 text-sm px-2 py-1 mx-1 my-2 ">HTML</div>
                         <div class="bg-yellow-900/50 rounded-3xl text-yellow-400 text-sm px-2 py-1 mx-1 my-2">CSS</div>
@@ -414,9 +446,9 @@
                     </div>
                 </div>
             </div>
-         </div>
+        </div>
 
-         <!-- ContactSection -->
+        <!-- ContactSection -->
 
     </main>
 
