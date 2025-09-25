@@ -39,4 +39,27 @@ clickEffect(ViewMyWorkBtn);
 clickEffect(GetInTouchBtn);
 
 
+const links = document.querySelectorAll(".nav-link");
+links.forEach(link => {
+    link.addEventListener("click", () => {
+      links.forEach(l => l.classList.remove("text-purple-500", "font-bold"));
+      link.classList.add("text-purple-500", "font-bold");
+    });
+  });
+
+const mblinks = document.querySelectorAll(".mb-nav-link");
+mblinks.forEach(link => {
+  link.addEventListener("click", () => {
+    mblinks.forEach(l => {
+      l.classList.remove("text-purple-300", "font-bold");
+      l.classList.add("text-white");
+    });
+    link.classList.remove("text-white");
+    link.classList.add("text-purple-300", "font-bold");
+  });
+});
+
+
+
+
 

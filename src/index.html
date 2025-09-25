@@ -69,8 +69,6 @@
             to {
                 width: 12ch
             }
-
-            /* match text length */
         }
 
         @keyframes blink {
@@ -147,10 +145,10 @@
             </div>
             <div id="navButtons" class="md:flex items-center justify-center hidden cursor-pointer ">
                 <ul class="flex space-x-8 ">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
             </div>
         </nav>
@@ -158,13 +156,13 @@
         <div id="mobile-menu"
             class="hidden flex-col bg-purple-900 p-4 space-y-4 md:hidden transition-all duration-300 ease-in-out cursor-pointer sticky top-[80px] z-40">
             <a href="#about"
-                class=" text-white flex items-center font-bold justify-center text-center w-full cursor-pointer">About</a>
+                class=" text-white flex items-center font-bold justify-center text-center w-full cursor-pointer mb-nav-link">About</a>
             <a href="#skills"
-                class=" text-white flex items-center font-bold justify-center text-center w-full cursor-pointer">Skills</a>
+                class=" text-white flex items-center font-bold justify-center text-center w-full cursor-pointer mb-nav-link">Skills</a>
             <a href="#projects"
-                class=" text-white flex items-center font-bold justify-center text-center w-full cursor-pointer">Projects</a>
+                class=" text-white flex items-center font-bold justify-center text-center w-full cursor-pointer mb-nav-link">Projects</a>
             <a href="#contacts"
-                class=" text-white flex items-center font-bold justify-center text-center w-full cursor-pointer">Contacts</a>
+                class=" text-white flex items-center font-bold justify-center text-center w-full cursor-pointer mb-nav-link">Contacts</a>
         </div>
         <!-- heroSection -->
         <div id="hero" class="">
