@@ -292,9 +292,6 @@
   .my-3 {
     margin-block: calc(var(--spacing) * 3);
   }
-  .my-20 {
-    margin-block: calc(var(--spacing) * 20);
-  }
   .my-30 {
     margin-block: calc(var(--spacing) * 30);
   }
